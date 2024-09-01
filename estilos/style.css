@@ -149,6 +149,10 @@ button:hover {
   overflow-y: auto;
 }
 
+#cart-container p {
+  padding-bottom: 20px;
+}
+
 #cart-items {
   list-style-type: none;
   padding: 0;
@@ -203,4 +207,28 @@ button:hover {
 #view-cart:hover,
 #checkout:hover {
   background-color: #0056b3;
+}
+
+.toastify {
+  border-radius: 20px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  font-size: 16px !important;
+  padding: 10px 20px !important;
+}
+
+.botonBorrar {
+  width: 50px;
+  height: 30px;
+  background-color: #ff4d4d;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.botonBorrar:hover {
+  background-color: black;
+  color: white;
 }

@@ -44,6 +44,18 @@ calcularTalleSuperior.addEventListener("click", (event) => {
   const busto = parseInt(document.getElementById("busto").value, 10);
   const bajoBusto = parseInt(document.getElementById("bajoBusto").value, 10);
 
+  // Validación
+  if (isNaN(busto) || isNaN(bajoBusto) || busto <= 50 || bajoBusto <= 50) {
+    Toastify({
+      text: "Por favor, ingresa medidas válidas",
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      style: { background: "red" },
+    }).showToast();
+    return;
+  }
+
   // Determinar el talle con condicionales
   const talleCorpinio =
     bajoBusto >= 62 && bajoBusto <= 72 && busto >= 75 && busto <= 95
@@ -107,6 +119,18 @@ calcularTalleInferior.addEventListener("click", (event) => {
 
   const cintura = parseInt(document.getElementById("cintura").value, 10);
   const cadera = parseInt(document.getElementById("cadera").value, 10);
+
+  // Validación
+  if (isNaN(cintura) || isNaN(cadera) || cintura <= 50 || cadera <= 50) {
+    Toastify({
+      text: "Por favor, ingresa medidas válidas",
+      duration: 3000,
+      gravity: "top",
+      position: "right",
+      style: { background: "red" },
+    }).showToast();
+    return;
+  }
 
   // Determinar el talle con condicionales
   const talleBombacha =
